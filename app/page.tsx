@@ -3,12 +3,12 @@ import { ITEMS } from "@/lib/items";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen text-gray-100" style={{background:"linear-gradient(180deg,#0a0a0a 0%,#111827 100%)"}}>
+    <div className="min-h-screen text-gray-100" role="main" aria-label="おにぎりスタック ホーム" style={{background:"linear-gradient(180deg,#0a0a0a 0%,#111827 100%)"}}>
 
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px)"}} />
-        <div className="text-8xl mb-4">🍙</div>
+      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative overflow-hidden" aria-label="ヒーローセクション">
+        <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px)"}} aria-hidden="true" />
+        <div className="text-8xl mb-4" aria-hidden="true">おにぎり</div>
         <h1 className="text-4xl font-black mb-2 tracking-tight">
           <span style={{color:"#f59e0b"}}>おにぎり</span>スタック
         </h1>
@@ -20,10 +20,11 @@ export default function HomePage() {
         </p>
         <Link
           href="/game"
-          className="px-10 py-4 rounded-2xl text-xl font-black text-black glow-pulse"
+          className="px-10 py-4 rounded-2xl text-xl font-black text-black glow-pulse min-h-[44px]"
+          aria-label="おにぎりスタックゲームを今すぐプレイする"
           style={{backgroundColor:"#f59e0b",boxShadow:"0 0 30px #f59e0b66"}}
         >
-          今すぐ遊ぶ 🎮
+          今すぐ遊ぶ
         </Link>
         <p className="mt-4 text-gray-500 text-sm">無料 · ブラウザで即プレイ</p>
       </section>
@@ -71,10 +72,11 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold mb-6 text-white">神おにぎりを目指せ！</h2>
         <Link
           href="/game"
-          className="px-12 py-5 rounded-2xl text-2xl font-black text-black"
+          className="px-12 py-5 rounded-2xl text-2xl font-black text-black min-h-[44px]"
+          aria-label="おにぎりスタックのゲームをプレイスタートする"
           style={{backgroundColor:"#f59e0b",boxShadow:"0 0 40px #f59e0b88"}}
         >
-          プレイスタート 🍙
+          プレイスタート
         </Link>
       </section>
 
