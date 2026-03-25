@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative overflow-hidden" aria-label="ヒーローセクション">
         <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,#f59e0b44 40px,#f59e0b44 41px)"}} aria-hidden="true" />
-        <div className="text-8xl mb-4" aria-hidden="true">おにぎり</div>
+        <div className="text-5xl font-black mb-4 tracking-tight" aria-hidden="true" style={{ color: "#f59e0b" }}>ONIGIRI</div>
         <h1 className="text-4xl font-black mb-2 tracking-tight">
           <span style={{color:"#f59e0b"}}>おにぎり</span>スタック
         </h1>
@@ -34,13 +34,13 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold text-center mb-8" style={{color:"#f59e0b"}}>あそびかた</h2>
         <div className="space-y-6">
           {[
-            { icon:"👆", title:"タップで落とす", desc:"画面をタップすると、おにぎりが落下します。タップ位置で左右を調整！" },
-            { icon:"🤝", title:"同じおにぎりを合体", desc:"同じ種類のおにぎりが触れると合体して、より大きなおにぎりに進化！" },
-            { icon:"📈", title:"スコアを積み上げろ", desc:"合体するほど高得点。神おにぎりを目指して積み上げよう！" },
-            { icon:"⚠️", title:"ゲームオーバーに注意", desc:"赤いラインを超えたまま2.5秒経過するとゲームオーバー！" },
+            { icon:"TAP", title:"タップで落とす", desc:"画面をタップすると、おにぎりが落下します。タップ位置で左右を調整！" },
+            { icon:"MIX", title:"同じおにぎりを合体", desc:"同じ種類のおにぎりが触れると合体して、より大きなおにぎりに進化！" },
+            { icon:"UP", title:"スコアを積み上げろ", desc:"合体するほど高得点。神おにぎりを目指して積み上げよう！" },
+            { icon:"OUT", title:"ゲームオーバーに注意", desc:"赤いラインを超えたまま2.5秒経過するとゲームオーバー！" },
           ].map((r,i) => (
             <div key={i} className="flex items-start gap-4 p-4 rounded-xl" style={{backgroundColor:"#ffffff0a",border:"1px solid #ffffff11"}}>
-              <div className="text-3xl">{r.icon}</div>
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center text-xs font-black" style={{backgroundColor:"#f59e0b22",color:"#f59e0b"}}>{r.icon}</div>
               <div>
                 <div className="font-bold text-white">{r.title}</div>
                 <div className="text-gray-400 text-sm mt-1">{r.desc}</div>
@@ -56,7 +56,7 @@ export default function HomePage() {
         <div className="space-y-2">
           {ITEMS.map((item, i) => (
             <div key={item.level} className="flex items-center gap-4 p-3 rounded-xl" style={{backgroundColor:item.color+"18",border:"1px solid "+item.color+"44"}}>
-              <div className="text-3xl w-10 text-center">{item.emoji}</div>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0" style={{ backgroundColor: item.color + "33", color: item.color }}>Lv{item.level}</div>
               <div className="flex-1">
                 <div className="font-bold text-white text-sm">{item.name}</div>
                 <div className="text-gray-400 text-xs">Lv.{item.level} · +{item.score}点</div>
