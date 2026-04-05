@@ -1,28 +1,27 @@
 # おにぎりスタック
-
-> おにぎりを落として積み重ね、同じ種類を合体させてハイスコアを狙う落下系パズルゲーム
+> おにぎりを積み上げるカジュアルゲーム
 
 ## サービス概要
+- **カテゴリ**: Webアプリ
+- **URL**: https://onigiri-stack.vercel.app
+- **提供形態**: Webブラウザで利用可能（登録不要で試せます）
+- **開発**: Claude Code + Next.js 16 + Vercel
 
-おにぎりスタックは、スイカゲームにインスパイアされた落下系パズルゲームです。おにぎりを積み重ねて同じ種類同士を合体させ、10段階の進化を通じて神おにぎりを目指します。赤いラインを超えたまま2.5秒経過するとゲームオーバーというスリルが中毒性の源です。
+## 主要ページ
+- [トップページ](https://onigiri-stack.vercel.app/): メイン機能・サービス説明
+- [ツール](https://onigiri-stack.vercel.app/tool): AI機能の利用画面（一部サービス）
+- [プライバシーポリシー](https://onigiri-stack.vercel.app/privacy): 個人情報の取り扱い
+- [特定商取引法に基づく表記](https://onigiri-stack.vercel.app/legal): 法的情報
 
-## 主な機能
-
-- Canvas描画のリアルタイム落下物理シミュレーション
-- 10段階のおにぎり進化システム
-- ハイスコアのローカル保存
-- Xシェア機能
+## 利用シーン
+おにぎりを積み上げるカジュアルゲーム
 
 ## 技術スタック
+- フロントエンド: Next.js 16, React 19, TypeScript, Tailwind CSS
+- AI: Claude claude-sonnet-4-6 (Anthropic)
+- バックエンド: Vercel Edge Functions, Supabase
+- 決済: KOMOJU（クレジットカード・コンビニ払い対応）
 
-- Next.js 16 / React 19
-- HTML Canvas API
-- Vercel デプロイ
-
-## URL
-
-https://onigiri-stack.vercel.app
-
-## 運営
-
-ポッコリラボ（2026）
+## robots.txt
+AIクローラーによるインデックスを歓迎します。
+GPTBot, ClaudeBot, PerplexityBot, Googlebot-Extended のアクセスを許可しています。
